@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" href="popup.css">
+<title>地区对齐检测</title>
+</head>
+<body>
+  <header>
+    <div class="title">🌏 地区对齐检测</div>
+    <button id="refresh" title="重新检测">↻ 重新检测</button>
+  </header>
+
+  <section id="status" class="status unknown">
+    <div id="status-emoji">⏳</div>
+    <div>
+      <div id="status-title">正在检测…</div>
+      <div id="status-summary">正在查你的 IP 出口、设备时区和账号地区对不对得上。</div>
+    </div>
+  </section>
+
+  <section class="facts">
+    <div class="row"><span>🏠 常驻地</span><b id="fact-home">—</b></div>
+    <div class="row"><span>📡 IP 出口</span><b id="fact-ip">—</b></div>
+    <div class="row"><span>🕐 设备时区</span><b id="fact-tz">—</b></div>
+    <div class="row"><span>🗣 浏览器语言</span><b id="fact-lang">—</b></div>
+  </section>
+
+  <section>
+    <div class="section-title">账号地区对照</div>
+    <div id="accounts"></div>
+  </section>
+
+  <section>
+    <div class="section-title">提醒</div>
+    <ul id="issues"></ul>
+  </section>
+
+  <footer>
+    <span id="checked-at">尚未检测</span>
+    <button id="open-options">⚙ 设置常驻地 / 账号地区</button>
+  </footer>
+
+  <script src="lib/regions.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

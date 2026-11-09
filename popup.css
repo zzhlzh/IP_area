@@ -1,0 +1,19 @@
+body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; width: 360px; margin: 0; padding: 12px; color: #1f2430; background: #fbfbfd; }
+header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+.title { font-size: 16px; font-weight: 700; }
+button { border: 1px solid #d8dce6; background: #fff; border-radius: 8px; padding: 5px 10px; cursor: pointer; font-size: 12px; }
+button:hover { background: #f0f2f8; }
+.status { display: flex; gap: 10px; border-radius: 12px; padding: 12px; margin-bottom: 10px; border: 1px solid #e3e6ee; background: #fff; }
+.status #status-emoji { font-size: 26px; line-height: 1.2; }
+#status-title { font-weight: 700; margin-bottom: 4px; }
+#status-summary { font-size: 12px; color: #555c6e; line-height: 1.5; }
+.status.ok { border-color: #bfe6c8; background: #f2fbf4; }
+.status.medium, .status.low { border-color: #f3dfa0; background: #fffaf0; }
+.status.high { border-color: #f3b3ae; background: #fff4f3; }
+.facts .row, .acct-row { display: flex; justify-content: space-between; padding: 6px 2px; border-bottom: 1px dashed #e6e8f0; font-size: 13px; }
+.section-title { font-weight: 700; margin: 12px 0 4px; font-size: 13px; }
+#issues { margin: 4px 0 0; padding-left: 18px; font-size: 12px; line-height: 1.6; color: #444a5a; }
+.badge { font-size: 11px; border-radius: 999px; padding: 1px 8px; }
+.badge.ok { background: #e2f6e7; color: #12733a; }
+.badge.bad { background: #fde8e6; color: #b23227; }
+footer { display: flex; justify-content: space-between; align-items: center; margin-top: 12px; font-size: 11px; color: #8a90a3; }

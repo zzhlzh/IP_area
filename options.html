@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>地区对齐检测 · 设置</title>
+<style>
+  body { font-family: "Microsoft YaHei", "PingFang SC", sans-serif; max-width: 560px; margin: 32px auto; padding: 0 16px; color: #1f2430; line-height: 1.7; }
+  h1 { font-size: 20px; } label { display: block; margin-top: 16px; font-weight: 600; }
+  input, select { margin-top: 6px; padding: 7px 10px; border: 1px solid #d8dce6; border-radius: 8px; width: 100%; box-sizing: border-box; }
+  .hint { font-size: 12px; color: #6a7186; font-weight: 400; }
+  button { margin-top: 24px; background: #2563eb; color: #fff; border: 0; border-radius: 8px; padding: 9px 22px; cursor: pointer; font-size: 14px; }
+  #saved { margin-left: 12px; color: #12733a; font-size: 13px; }
+  fieldset { border: 1px solid #e3e6ee; border-radius: 12px; margin-top: 20px; }
+</style>
+</head>
+<body>
+  <h1>🌏 地区对齐检测 · 设置</h1>
+  <p class="hint">账号地区请按各平台「账户中心 / 设置」里显示的实际地区填写。扩展不会替你登录任何平台读账号信息——它只检测你这台设备的 IP 出口和时区，再和你填的地区对照。</p>
+
+  <label>常驻地（国家/地区代码）
+    <input id="homeCountry" placeholder="例如 CN">
+  </label>
+  <label>常驻地备注（显示用）
+    <input id="homeLabel" placeholder="例如 成都 · 天府新区">
+  </label>
+
+  <fieldset>
+    <legend>账号地区</legend>
+    <div id="accounts"></div>
+  </fieldset>
+
+  <label>自动检测间隔（分钟，最少 15）
+    <input id="interval" type="number" min="15" step="5">
+  </label>
+  <label style="font-weight:400">
+    <input id="notify" type="checkbox" style="width:auto"> 地区对不上变严重时，弹系统通知提醒我
+  </label>
+
+  <button id="save">保存</button><span id="saved"></span>
+
+  <script src="lib/regions.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>
